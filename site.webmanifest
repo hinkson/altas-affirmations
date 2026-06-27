@@ -1,0 +1,14 @@
+{
+  "name": "Alta's Affirmations",
+  "short_name": "Alta",
+  "icons": [
+    {
+      "src": "assets/app-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#f6a08d",
+  "background_color": "#fff7f0",
+  "display": "standalone"
+}
