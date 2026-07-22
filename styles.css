@@ -8,6 +8,7 @@
   --peach: #f59f83;
   --rose: #e86f8d;
   --teal: #0f8f83;
+  --teal-soft: #35b0a3;
   --blue: #376fe8;
   --gold: #d9970f;
   --purple: #6d3bc5;
@@ -437,6 +438,10 @@ h3 {
 .launch-strip h2 {
   margin: 0;
   font-size: clamp(1.5rem, 3vw, 2.35rem);
+}
+
+.launch-note {
+  margin-top: 10px;
 }
 
 .launch-strip p:last-child {
@@ -880,8 +885,133 @@ h3 {
   color: #ffd7c4;
 }
 
+/* Echoes the gradient on the in-app Alta's Plus screen. */
+.privacy-panel--plus {
+  background: linear-gradient(135deg, #7c3aed, #be185d, #f97316);
+}
+
+.privacy-panel--plus .eyebrow {
+  color: #ffe0c4;
+}
+
 .contact-card--coral {
   background: linear-gradient(135deg, rgba(237, 97, 84, 0.30), rgba(249, 150, 82, 0.16)), rgba(255, 255, 255, 0.9);
+}
+
+/* ---- Wait, Did I? teal theme ---- */
+.app-card--teal {
+  border-top-color: var(--teal);
+}
+
+.theme-teal .button-primary {
+  background: linear-gradient(135deg, var(--teal-soft), var(--teal));
+  box-shadow: 0 14px 28px rgba(15, 143, 131, 0.26);
+}
+
+.theme-teal .button-primary:hover,
+.theme-teal .button-primary:focus-visible {
+  background: linear-gradient(135deg, #2ba99d, #0c7c72);
+}
+
+.theme-teal .text-link {
+  color: var(--teal);
+}
+
+.phone-screen--teal {
+  background:
+    linear-gradient(155deg, rgba(233, 248, 246, 0.96), rgba(213, 240, 238, 0.95) 52%, rgba(198, 232, 232, 0.92)),
+    #eef8f6;
+}
+
+/* All-clear hero + mini checklist inside the phone mockup */
+.clear-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 172px;
+  border-radius: 18px;
+  padding: 20px;
+  background: linear-gradient(135deg, #2ba0a2, #0c667f);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 20px 38px rgba(12, 102, 127, 0.30);
+}
+
+.clear-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.clear-title {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.clear-caption {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.check-list {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.check-list li {
+  position: relative;
+  padding: 10px 12px 10px 38px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 18px rgba(12, 102, 127, 0.10);
+}
+
+.check-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.privacy-panel--teal {
+  background: linear-gradient(135deg, #0c7c72, #063f4d);
+}
+
+.privacy-panel--teal .eyebrow {
+  color: #bfeee7;
+}
+
+.contact-card--teal {
+  background: linear-gradient(135deg, rgba(15, 143, 131, 0.28), rgba(53, 176, 163, 0.16)), rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 880px) {
