@@ -1,17 +1,30 @@
-# Alta's Affirmations Website
+# Apps — the wellness studio website
 
-This is a static website for Alta's Affirmations. It can be hosted for free on GitHub Pages, Cloudflare Pages, Netlify, or any static host.
+A static "studio" website for the gentle/wellness apps. It can be hosted for free on
+GitHub Pages, Cloudflare Pages, Netlify, or any static host.
+
+Three apps have cards on `index.html`:
+
+| App | Page slug | Status |
+| --- | --- | --- |
+| Alta's Affirmations | `alta` (privacy/support are unprefixed) | Live on the App Store |
+| Not Beaten | `not-beaten` | Live on the App Store |
+| Wait, Did I? | `wait-did-i` | Coming soon |
 
 ## Pages
 
-- `index.html`: marketing landing page
-- `support.html`: App Store support URL candidate
-- `privacy.html`: App Store privacy policy URL candidate
+- `index.html`: studio landing page (the apps grid)
+- `alta.html`, `not-beaten.html`, `wait-did-i.html`: per-app product pages
+- `privacy.html` / `support.html`: **Alta's** policy and support pages (unprefixed for
+  historical reasons — they predate the site becoming a studio)
+- `<slug>-privacy.html` / `<slug>-support.html`: the same pair for the other two apps
 
 ## Before Publishing
 
-1. Add the live App Store URL to the launch-status section in `index.html` after approval.
-2. If using a custom domain, add a `CNAME` file with that domain.
+1. `publish-site.sh` aborts if the affirmation pack count in `alta.html`'s hero stat
+   doesn't match the app. Run `./publish-site.sh --check` first.
+2. Swap the placeholder button on `wait-did-i.html` for the real App Store link at launch.
+3. If using a custom domain, add a `CNAME` file with that domain.
 
 ## Local Preview
 
