@@ -9,7 +9,7 @@ Three apps have cards on `index.html`:
 | --- | --- | --- |
 | Alta's Affirmations | `alta` (privacy/support are unprefixed) | Live on the App Store |
 | Not Beaten | `not-beaten` | Live on the App Store |
-| Wait, Did I? | `wait-did-i` | Coming soon |
+| Wait, Did I? | `wait-did-i` | Live on the App Store |
 
 ## Pages
 
@@ -23,8 +23,7 @@ Three apps have cards on `index.html`:
 
 1. `publish-site.sh` aborts if the affirmation pack count in `alta.html`'s hero stat
    doesn't match the app. Run `./publish-site.sh --check` first.
-2. Swap the placeholder button on `wait-did-i.html` for the real App Store link at launch.
-3. If using a custom domain, add a `CNAME` file with that domain.
+2. If using a custom domain, add a `CNAME` file with that domain.
 
 ## Local Preview
 
