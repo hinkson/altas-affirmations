@@ -22,8 +22,16 @@ Three apps have cards on `index.html`:
 ## Before Publishing
 
 1. `publish-site.sh` aborts if the affirmation pack count in `alta.html`'s hero stat
-   doesn't match the app. Run `./publish-site.sh --check` first.
+   doesn't match the app **live on the App Store** (counted from that version's source in
+   git, not from master, so an unreleased pack never blocks a publish). Tag each upload
+   `alta-<version>-build-<n>` to make the match exact. Run `./publish-site.sh --check` first.
 2. If using a custom domain, add a `CNAME` file with that domain.
+3. Each product page's hero is a real screen from the app, at `assets/shots/<slug>-hero.jpg`.
+   Those files are **not in this folder** (no images in the monorepo): `publish-site.sh`
+   builds them from `~/Desktop/Studio Assets/<App>/Website/raw/hero.png` straight into the
+   deploy repo, and aborts if one is missing. When an app's store frames are reshot, replace
+   its `hero.png` in the same sitting. To preview locally, copy the built JPEGs into a
+   scratch copy of `docs/assets/shots/`.
 
 ## Local Preview
 

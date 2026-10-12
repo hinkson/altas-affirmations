@@ -946,6 +946,23 @@ h3 {
     #eef8f6;
 }
 
+/* A real screen from the app, in place of the drawn mockup. The image is a
+   plain capture with a 9:41 status bar, so the frame's island sits over it as on
+   a phone. Doubled class so the 620px query's .phone-screen padding cannot win.
+   The file is not in this folder: publish-site.sh builds it from Studio Assets. */
+.phone-screen.phone-screen--shot {
+  padding: 0;
+  background: #f4eef2;
+}
+
+.phone-screen--shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
 /* All-clear hero + mini checklist inside the phone mockup */
 .clear-hero {
   display: flex;
